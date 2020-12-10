@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Approval</title>
+</head>
+
+<body style = "background: #48D1CC">
+
+     <br>
+       <center><b><h2 style="color:#FF0000";>{{ prediction_text}}</h2></b></center>
+     <br>
+    <center><h1 class='main_heading'> Prediction of Probability of Loan Approval </h1></center>
+    <br>
+   <center>
+      <h2>Fill in the fields and click CHECK</h2>
+    <br>
+    <form class="form-horizontal" action="{{ url_for('predict')}}"method="post">
+    <p class="names1">Gender</p>
+        <select class="sl1" type="number"  name="Gender" required="required">
+                <option value="0">Gender:</option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+        </select>
+
+    <p class="names2">Marietal Status</p>
+        <select class="sl2" type="number"  name="Married" required="required">
+                <option value="0">Marietal Status:</option>
+                <option value="1">Married or with a Common-law Partner</option>
+                <option value="0">Single, Separated, Widowed or Divorced</option>
+        </select>
+
+    <p class="names3">Education</p>
+        <select class="sl3" type="number"  name="Education" required="required">
+                <option value="0">Education:</option>
+                <option value="1">Graduate</option>
+                <option value="0">not Graduate</option>
+        </select>
+
+    <p class="names4">Number of Dependents</p>
+        <input  class="sl4" type="text" name="Dependents" placeholder="Number of Dependents" required="required" />
+
+    <p class="names5">Monthly Income</p>
+        <input  class="sl5" type= "text" name="ApplicantIncome" placeholder="Monthly Income" required="required" />
+
+    <p class="names6">Co-applicant's Income</p>
+        <input  class="sl6" type="text" name="CoaplicantIncome" placeholder="Co-applicant's Income" required="required" />
+
+    <p class="names7">Desired Loan Amount</p>
+        <input  class="sl7" type="text" name="LoanAmount" placeholder="Desired Loan Amount" required="required" />
+
+    <p class="names8">Loan Duration in Months</p>
+        <input class="sl8" type="text" name="Loan_Amount_Term" placeholder="Loan Duration in Months" required="required" />
+
+    <p class="names9">Previous Loan Collected?</p>
+        <select class="sl9" type="number"  name="Credit_History" required="required">
+                <option value="0">Credit History?</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+        </select>
+
+    <p class="names10">Are you self-employed?</p>
+        <select class="sl10" type="number" name="Self_Employed" required="required">
+                <option value="0">Self-Employed?</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+        </select>
+
+    <p class="names11">Location of Property</p>
+        <select class="sl11" type="number" name="Property_Area" required="required">
+                <option value="0">Location of Property:</option>
+                <option value="2">Urban</option>
+                <option value="1">Semiurban</option>
+                <option value="0">Rural</option>
+        </select>
+
+
+     <br>
+     <br>
+        <center><button type="submit" class="button">CHECK</button></center>
+
+   </form>
+
+  </center>
+
+</body>
+</html>
+
+<style type="text/css">
+    .names1 {
+        margin-top: 0px;
+        margin-left: 500px;
+        position: absolute;
+    }
+    .names2 {
+        margin-top: 50px;
+        margin-left: 500px;
+        position: absolute;
+    }
+    .names3 {
+        margin-top: 100px;
+        margin-left: 500px;
+        position: absolute;
+    }
+    .names4 {
+        margin-top: 150px;
+        margin-left: 500px;
+        position: absolute;
+    }
+    .names5 {
+        margin-top: 200px;
+        margin-left: 500px;
+        position: absolute;
+    }
+    .names6 {
+        margin-top: 250px;
+        margin-left: 500px;
+        position: absolute;
+    }
+    .names7 {
+        margin-top: 300px;
+        margin-left: 500px;
+        position: absolute;
+    }
+    .names8 {
+        margin-top: 350px;
+        margin-left: 500px;
+        position: absolute;
+    }
+    .names9 {
+        margin-top: 400px;
+        margin-left: 500px;
+        position: absolute;
+    }
+    .names10 {
+        margin-top: 450px;
+        margin-left: 500px;
+        position: absolute;
+    }
+    .names11 {
+        margin-top: 500px;
+        margin-left: 500px;
+        position: absolute;
+    }
+
+    .sl1 {
+        margin-bottom: 20px
+        margin-left: 90px;
+        position: absolute;
+    }
+    .sl2 {
+        margin-top: 50px;
+        position: absolute;
+    }
+    .sl3 {
+        margin-top: 100px;
+        position: absolute;
+    }
+    .sl4 {
+        margin-top: 150px;
+        position: absolute;
+    }
+    .sl5 {
+        margin-top: 200px;
+        position: absolute;
+    }
+    .sl6 {
+        margin-top: 250px;
+        position: absolute;
+    }
+    .sl7 {
+        margin-top: 300px;
+        position: absolute;
+    }
+    .sl8 {
+        margin-top: 350px;
+        position: absolute;
+    }
+    .sl9 {
+        margin-top: 400px;
+        position: absolute;
+    }
+    .sl10 {
+        margin-top: 450px;
+        position: absolute;
+    }
+    .sl11 {
+        margin-top: 500px;
+        position: absolute;
+    }
+
+    .button {
+        align: center;
+        margin-top: 550px;
+    }
+</style>
